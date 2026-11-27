@@ -17,7 +17,7 @@ Scripts and results for practical work 3. Datasets: Heart Disease (Cleveland) an
 
 ### Distributions
 
-- **age**: roughly bell-shaped, slightly skewed to the left (more older patients). Most patients are between 48 and 61 years old.
+- **age**: broad and irregular, with two peaks (around 42 and 59 years), not a clean bell shape. Most patients are between 48 and 61 years old.
 - **chol**: strongly right-skewed with a long tail of high values (up to 564). Most values lie between 211 and 275.
 - **trestbps**: right-skewed, with a tail of high blood pressure readings (up to 200).
 - **thalach**: left-skewed, with most values between 133 and 166 and a tail of low maximum heart rates (down to 71).
@@ -32,7 +32,7 @@ Output:
     thalach   shapiro W=0.976 p=7e-05  skew=-0.53  excess kurtosis=-0.07
 
 Verdicts:
-- **age: approximately normal.** Skew and kurtosis are small. Shapiro-Wilk gives p = 0.006, but with n = 303 this test flags small deviations, so the shape itself is judged close to normal.
+- **age: not clearly normal, weak evidence.** Skew and kurtosis are small, but the histogram has two peaks, so it does not look like a bell curve. Shapiro-Wilk gives p = 0.006. Verdict: treat as non-normal, so the nonparametric checks (Spearman) are the safer reading.
 - **chol: not normal.** Skew 1.13 and excess kurtosis 4.40 are large;.
 - **trestbps: not normal.** Clear right skew (0.70) and a tail of high readings.
 - **thalach: not normal, but mildly.** Skew -0.53. Shapiro-Wilk rejects normality (p = 7e-05). The shape is close enough that it matters only for the choice of test.
