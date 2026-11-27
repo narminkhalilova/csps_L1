@@ -33,7 +33,7 @@ Output:
 
 Verdicts:
 - **age: not clearly normal, weak evidence.** Skew and kurtosis are small, but the histogram has two peaks, so it does not look like a bell curve. Shapiro-Wilk gives p = 0.006. Verdict: treat as non-normal, so the nonparametric checks (Spearman) are the safer reading.
-- **chol: not normal.** Skew 1.13 and excess kurtosis 4.40 are large;.
+- **chol: not normal.** Skew 1.13 and excess kurtosis 4.40 are large.
 - **trestbps: not normal.** Clear right skew (0.70) and a tail of high readings.
 - **thalach: not normal, but mildly.** Skew -0.53. Shapiro-Wilk rejects normality (p = 7e-05). The shape is close enough that it matters only for the choice of test.
 
